@@ -8,7 +8,13 @@ class categoriaAdmin(admin.ModelAdmin):
 admin.site.register(categoria, categoriaAdmin)
 
 #----------------------------------------
+class ProductoAdmin(admin.ModelAdmin):
+    list_display = ['nombre','descripcion','existencia']
 
+admin.site.register(producto, ProductoAdmin)
 
-admin.site.register(producto, productoAdmin)
-admin.site.register(carro, carroAdmin)
+#---------------------------------------
+# class CarroAdmin(admin.ModelAdmin):
+#     list_display = ['usuario','productos','cantidad','estado']
+
+# admin.site.register(carro, CarroAdmin)
